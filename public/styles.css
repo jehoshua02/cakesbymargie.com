@@ -2,7 +2,7 @@
 .content-block,
 .footer-block {
     /* limit width of page blocks */
-    max-width: 1024;
+    max-width: 1024px;
 
     /* center page blocks */
     margin: 0 auto;
@@ -42,11 +42,6 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
-    /* set font */
-    font-family: 'Alex Brush';
-}
-
 .header-block .title,
 .header-block .tagline {
     /* center title and tagline */
@@ -54,6 +49,9 @@ h1 {
 
     /* fix title and tagline margins */
     margin: 10px 0 0;
+
+    /* set font */
+    font-family: 'Alex Brush';
 }
 
 /* now about font sizing ... let's try [rem units](http://snook.ca/archives/html_and_css/font-size-with-rem) */
@@ -93,6 +91,12 @@ html {
     /* need height to be scaled with width. Trying the [bottom padding trick](http://stackoverflow.com/questions/11243075/css-scale-height-to-match-width-possibly-with-a-formfactor#answer-11243324) */
     /* pixel is no good. percent is based on parent height. but apparently padding is based on parent width */
     padding-bottom: 52.4%; /* 450px height at a width of 600px */
+    max-height: 525px;
+
+    /* fix box sizing again so padding doesn't add to total width of block */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 
     /* center container horizontally on page */
     margin: auto;
@@ -183,4 +187,25 @@ html {
 .content-block .images-block {
     /* non-static position so previous and next will position properly */
     position: relative;
+}
+
+.content-block .pricing-block {
+    margin-top: 5.86%; /* 60px/x% = 1024px/100% - solve for x */
+}
+
+.content-block h1 {
+    /* set font */
+    font-family: 'Alex Brush';
+}
+
+.pricing-block h1 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.content-block .pricing-block p {
+    /* limit width of paragraphs and horizontally center */
+    max-width: 700px;
+    width: 70%;
+    margin: 20px auto 0;
 }
