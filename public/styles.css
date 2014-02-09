@@ -2,36 +2,37 @@
 .content-block,
 .footer-block {
     /* limit width of page blocks */
-    max-width: 960px;
+    max-width: 1024;
 
     /* center page blocks */
     margin: 0 auto;
-
-    /* give some background color so we can see separation */
-    outline: 1px solid #eeeeee;
 }
 
-/* get rid of body margin */
+.header-block,
+.footer-block {
+    /* give some outline color so we can see separation */
+    outline: 1px solid #EEEEEE;
+}
+
 body {
+    /* get rid of body margin */
     margin: 0;
+
+    /* set default text color */
+    color: #606060;
 }
 
 .header-block .logo {
     /* give the header block logo some dimensions */
-    width: 160px;
-    height: 160px;
+    width: 80px;
+    height: 80px;
+    margin: auto;
 
-    /* also give background color so we can see */
+    /* also give outline color so we can see */
     outline: 1px solid #f5f5f5;
-
-    /* float left so title and tagline can line up to the right */
-    float: left;
 }
 
 .header-block {
-    /* fix the header to contain the floating logo */
-    overflow: auto;
-
     /* some padding */
     padding: 10px;
 
@@ -41,15 +42,18 @@ body {
     box-sizing: border-box;
 }
 
-.header-block .title,
-.header-block .tagline {
-    /* push away from logo */
-    padding-left: 180px;
+h1 {
+    /* set font */
+    font-family: 'Alex Brush';
 }
 
-.header-block .title {
-    /* remove title margin */
-    margin: 0;
+.header-block .title,
+.header-block .tagline {
+    /* center title and tagline */
+    text-align: center;
+
+    /* fix title and tagline margins */
+    margin: 10px 0 0;
 }
 
 /* now about font sizing ... let's try [rem units](http://snook.ca/archives/html_and_css/font-size-with-rem) */
@@ -66,17 +70,9 @@ html {
     font-size: 3.9rem;
 }
 
-.header-block .tagline {
-    /* explicitly set tagline margin */
-    margin: 20px 0 0;
-}
-
 .content-block {
     /* separate from header */
     margin-top: 20px;
-
-    /* add some padding in content block - but not on top since we already have 20px */
-    padding: 0 10px 10px;
 
     /* fix box sizing again so padding doesn't add to total width of block */
     -moz-box-sizing: border-box;
@@ -84,16 +80,19 @@ html {
     box-sizing: border-box;
 }
 
+.content-block .images-block {
+    /* give some outline color so we can see */
+    outline: 1px solid #EEEEEE;
+}
+
 .content-block .images-block .image-container {
     /* give the image container relative width */
-    width: 60%; /* 600px when page is at 960px */
+    width: 70%; /* 600px when page is at 960px */
+    max-width: 700px;
 
     /* need height to be scaled with width. Trying the [bottom padding trick](http://stackoverflow.com/questions/11243075/css-scale-height-to-match-width-possibly-with-a-formfactor#answer-11243324) */
     /* pixel is no good. percent is based on parent height. but apparently padding is based on parent width */
-    padding-bottom: 45%; /* 450px height at a width of 600px */
-
-    /* give background color so we can see it */
-    outline: 1px solid #f5f5f5;
+    padding-bottom: 52.4%; /* 450px height at a width of 600px */
 
     /* center container horizontally on page */
     margin: auto;
@@ -138,7 +137,7 @@ html {
     display: block;
 
     /* make font color gray */
-    color: #eeeeee;
+    color: #EEEEEE;
 
     /* increase font-size */
     font-size: 7rem;
@@ -149,16 +148,8 @@ html {
     /* we want cursor */
     cursor: pointer;
 
-    /* set background color so we can see it */
-    outline: 1px solid #f5f5f5;
-
     /* set responsive width */
-    width: 20%;
-
-    /* padding trick, controls height and centers text */
-    padding: 15% 0 30%;
-    height: 0;
-    vertical-align: top;
+    width: 50%;
 
     /* fix box sizing again so padding doesn't add to total width of block */
     -moz-box-sizing: border-box;
@@ -168,14 +159,25 @@ html {
     /* position relative to top of block */
     position: absolute;
     top: 0;
+
+    /* fix height and vertical alignment */
+    min-height: 100%;
 }
 
 .content-block .images-block .previous {
     left: 0;
+
+    /* push button text from center of image container */
+    padding-right: 35%;
+    padding-left: 0;
 }
 
 .content-block .images-block .next {
     right: 0;
+
+    /* push button text from center of image container */
+    padding-left: 35%;
+    padding-right: 0;
 }
 
 .content-block .images-block {
