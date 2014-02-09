@@ -29,7 +29,7 @@ function Gallery(selector) {
         var to = from[direction]();
 
         if (!to.length) {
-            var index = {'next': 0, 'previous': -1}[direction];
+            var index = {'next': 0, 'prev': -1}[direction];
             if (index === undefined) {
                 return false;
             }
