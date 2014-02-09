@@ -8,7 +8,6 @@
     margin: 0 auto;
 }
 
-.header-block,
 .footer-block {
     /* give some outline color so we can see separation */
     outline: 1px solid #EEEEEE;
@@ -26,10 +25,15 @@ body {
     /* give the header block logo some dimensions */
     width: 80px;
     height: 80px;
-    margin: auto;
+    margin: 0 auto;
 
     /* also give outline color so we can see */
     outline: 1px solid #f5f5f5;
+}
+
+.header-block .logo img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .header-block {
@@ -201,6 +205,7 @@ html {
 .pricing-block h1 {
     text-align: center;
     font-size: 1.8rem;
+    margin-bottom: 0;
 }
 
 .content-block .pricing-block p {
@@ -208,4 +213,70 @@ html {
     max-width: 700px;
     width: 70%;
     margin: 20px auto 0;
+}
+
+.content-block .round-price-block,
+.content-block .square-price-block,
+.content-block .sheet-price-block {
+    /* 3 column layout */
+    float: left;
+    width: 33.3%;
+    padding-left: 20px;
+
+    /* fix margin */
+    margin-top: 40px;
+
+    /* minimum width before content breaks */
+    min-width: 210px;
+
+    /* fix box sizing again so padding doesn't add to total width of block */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.content-block .price-charts-block :first-child {
+    padding-left: 0;
+}
+
+.content-block .round-price-block h1,
+.content-block .square-price-block h1,
+.content-block .sheet-price-block h1 {
+    /* fix margins */
+    margin: 0;
+}
+
+.content-block .round-price-block table,
+.content-block .square-price-block table,
+.content-block .sheet-price-block table {
+    /* also give outline color so we can see */
+    outline: 1px solid #f5f5f5;
+
+    border-radius: 5px;
+
+    /* dimensions */
+    width: 100%;
+}
+
+.content-block .round-price-block table td,
+.content-block .square-price-block table td,
+.content-block .sheet-price-block table td {
+    text-align: center;
+}
+
+.content-block .pricing-block .addons {
+    /* clear pricing charts */
+    clear: both;
+
+    /* set max width */
+    max-width: 700px;
+    margin: 40px auto 0;
+}
+
+.content-block .price-charts-block {
+    /* fix overlapping margin with addons */
+    overflow: hidden;
+
+    /* fix hidden outline */
+    padding: 0 0 1px 1px;
 }
