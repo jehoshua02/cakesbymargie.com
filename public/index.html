@@ -32,19 +32,20 @@
 
             <div class="image-container">
                 <div class="image-wrapper">
-                    <img alt="image-3"
-                        src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/t1/1374763_249067571926466_955236238_n.jpg" />
+                    <img alt="image-1"
+                        src="https://scontent-a-dfw.xx.fbcdn.net/hphotos-prn1/t1/q74/s720x720/1488810_242758345890722_1652378422_n.jpg" />
                 </div>
 
                 <div class="image-wrapper">
                     <img alt="image-2"
-                        src="https://scontent-a-dfw.xx.fbcdn.net/hphotos-prn2/t1/1517649_249067708593119_772276385_n.jpg" />
+                        src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-ash3/t1/1374763_249067571926466_955236238_n.jpg" />
                 </div>
 
                 <div class="image-wrapper">
-                    <img alt="image-1"
-                        src="https://scontent-a-dfw.xx.fbcdn.net/hphotos-prn1/t1/q74/s720x720/1488810_242758345890722_1652378422_n.jpg" />
+                    <img alt="image-3"
+                        src="https://scontent-a-dfw.xx.fbcdn.net/hphotos-prn2/t1/1517649_249067708593119_772276385_n.jpg" />
                 </div>
+
             </div>
 
             <button class="previous">&laquo;</button>
@@ -138,6 +139,18 @@
     </footer>
 
 
+<!-- scripts -->
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="script.js"></script>
+<script>
+$(function () {
+
+    var gallery = new Gallery('.images-block .image-container .image-wrapper');
+    $('.images-block .previous').on('click', gallery.previous);
+    $('.images-block .next').on('click', gallery.next);
+
+});
+</script>
 
 </body>
 </html>
