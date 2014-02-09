@@ -177,6 +177,11 @@ html {
     z-index: 100;
 }
 
+.content-block .images-block .previous:focus,
+.content-block .images-block .next:focus {
+    outline: 0 none;
+}
+
 .content-block .images-block .previous {
     left: 0;
 
