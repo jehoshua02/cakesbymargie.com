@@ -282,6 +282,7 @@ html {
     /* set max width */
     max-width: 700px;
     margin: 40px auto 0;
+    width: 70%;
 }
 
 .content-block .price-charts-block {
@@ -301,7 +302,7 @@ html {
 
     /* horizontally center */
     width: 33.3%;
-    min-width: 310px;
+    min-width: 322px;
     margin: auto;
 
     /* also give outline color so we can see */
@@ -314,6 +315,11 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+
+    /* bring to front so copyright and social links can slide under */
+    position: relative;
+    z-index: 2;
+    background-color: white;
 }
 
 .footer-block .contact-info-block h1,
@@ -365,7 +371,7 @@ html {
 .footer-block .copyright,
 .footer-block .social-icons-block {
     /* give dimension */
-    width: 33.3%;
+    width: 50%;
     height: 100px;
 
     /* position */
@@ -382,28 +388,33 @@ html {
 
     /* font */
     font-size: 0.8rem;
+
+    /* center content */
+    text-align: center;
 }
 
 .footer-block .copyright {
     left: 0;
-    text-align: right;
-    padding-right: 20px;
+    padding-right: 16.65%; /* half of contact block */
     border-top: 1px solid #EEEEEE;
 }
 
 .footer-block .social-icons-block {
     right: 0;
-    text-align: left;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding-left: 16.65%; /* half of contact block */
     border-top: 1px solid #EEEEEE;
 }
 
 .footer-block .social-icons-block iframe {
-    display: block;
-    float: left;
+    display: inline-block;
 }
 
+
+h1,
+h2 {
+    /* fix font weight: doesn't look same cross browser */
+    font-weight: normal;
+}
 
 @media (max-width: 594px) {
     .header-block .tagline {
@@ -422,7 +433,8 @@ html {
         font-size: 5.25rem; /* proportionate with decrease in tagline font size */
     }
 
-    .content-block .pricing-block p {
+    .content-block .pricing-block p,
+    .content-block .pricing-block .addons {
         width: 90%;
     }
 }
@@ -439,12 +451,6 @@ html {
     }
 }
 
-h1,
-h2 {
-    /* fix font weight: doesn't look same cross browser */
-    font-weight: normal;
-}
-
 @media (max-width: 660px) {
     .content-block .pricing-block .price-charts-block section {
         /* fix the pricing tables */
@@ -453,5 +459,44 @@ h2 {
         margin-left: auto;
         margin-right: auto;
         width: 50%;
+    }
+}
+
+.content-block, .header-block {
+    display: none;
+}
+@media (max-width: 965px) {
+    .footer-block .copyright {
+        padding-right: 161px; /* half contact info block min-width */
+    }
+
+    .footer-block .social-icons-block {
+        padding-left: 161px; /* half contact info block min-width */
+    }
+}
+
+@media (max-width: 720px) {
+    .footer-block .copyright,
+    .footer-block .social-icons-block {
+        bottom: -100px;
+        padding: 20px;
+    }
+
+    .footer-block .copyright {
+        text-align: right;
+    }
+
+    .footer-block .social-icons-block {
+        text-align: left;
+        border-left: 1px solid #EEEEEE;
+    }
+}
+
+@media (max-width: 395px) {
+    .footer-block .copyright,
+    .footer-block .social-icons-block {
+        position: static;
+        text-align: center;
+        width: 100%;
     }
 }
