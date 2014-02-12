@@ -436,6 +436,11 @@ h2 {
     .content-block .pricing-block p,
     .content-block .pricing-block .addons {
         width: 90%;
+
+        /* fix box sizing again so padding doesn't add to total width of block */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
 }
 
@@ -495,5 +500,14 @@ h2 {
         position: static;
         text-align: center;
         width: 100%;
+        border-left: 0;
+    }
+
+    .footer-block .contact-info-block {
+        width: 100%;
+        border-top: 1px solid #EEEEEE;
+        outline: none;
+        max-width: 100%;
+        min-width: 100%;
     }
 }
