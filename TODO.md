@@ -5,3 +5,5 @@
 + redesign header
 + redesign footer
 + promote on facebook
++ email
++ gallery
