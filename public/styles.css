@@ -415,6 +415,12 @@ html {
         /* downsize to be double the tagline */
         font-size: 3rem;
     }
+
+    .content-block .images-block .previous,
+    .content-block .images-block .next {
+        /* the width will be getting so small the previous and next icons won't fit */
+        font-size: 5.25rem; /* proportionate with decrease in tagline font size */
+    }
 }
 
 @media (max-width: 446px) {
