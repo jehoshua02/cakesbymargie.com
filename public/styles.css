@@ -421,6 +421,10 @@ html {
         /* the width will be getting so small the previous and next icons won't fit */
         font-size: 5.25rem; /* proportionate with decrease in tagline font size */
     }
+
+    .content-block .pricing-block p {
+        width: 90%;
+    }
 }
 
 @media (max-width: 446px) {
@@ -439,4 +443,15 @@ h1,
 h2 {
     /* fix font weight: doesn't look same cross browser */
     font-weight: normal;
+}
+
+@media (max-width: 660px) {
+    .content-block .pricing-block .price-charts-block section {
+        /* fix the pricing tables */
+        float: none;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 }
