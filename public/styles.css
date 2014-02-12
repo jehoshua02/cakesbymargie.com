@@ -462,9 +462,6 @@ h2 {
     }
 }
 
-.content-block, .header-block {
-    display: none;
-}
 @media (max-width: 965px) {
     .footer-block .copyright {
         padding-right: 161px; /* half contact info block min-width */
