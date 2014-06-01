@@ -113,7 +113,7 @@ html {
 
 .content-block .images-block .image-wrapper {
     /* fit to container */
-    height: 100%;
+    height: auto;
     width: 100%;
 
     /* stack images by positioning relative to container */
