@@ -1,0 +1,35 @@
+{
+  "name": "cakesbymargie.com",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Website for Cakes By Margie",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jehoshua02/cakesbymargie.com.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Joshua Stoutenburg <jehoshua02@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/jehoshua02/cakesbymargie.com/issues"
+  },
+  "homepage": "https://github.com/jehoshua02/cakesbymargie.com",
+  "devDependencies": {
+    "autoprefixer-loader": "^1.0.0",
+    "css-loader": "^0.9.0",
+    "del": "^1.1.0",
+    "extend": "^2.0.0",
+    "file-loader": "^0.8.1",
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.1.0",
+    "gulp-webpack": "^1.1.1",
+    "jsx-loader": "^0.12.2",
+    "react": "^0.12.1",
+    "require-dir": "^0.1.0",
+    "sass-loader": "^0.3.1",
+    "style-loader": "^0.8.2"
+  }
+}
