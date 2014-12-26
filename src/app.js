@@ -1,2 +1,2 @@
 require('./styles/app.scss');
-require('./components/App').render();
+require('./router').run();
