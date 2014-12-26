@@ -2,7 +2,7 @@ var configure = function (config) {
 
   config.resolve.extensions.push('.jsx'); // you can now require('file') instead of require('file.jsx')
 
-  config.module.loaders.push({ test: /\.jsx$/, loader: 'jsx-loader?harmony' });
+  config.module.loaders.push({ test: /\.jsx?$/, loader: 'jsx-loader?harmony' });
 
   // config.externals['react'] = {
   //   root: "React",
